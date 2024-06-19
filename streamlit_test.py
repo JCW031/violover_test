@@ -22,7 +22,7 @@ if user_id == 'violetta' and user_password == '1234':
     if sel_index > 0:  # Skip the first empty option
         img_file = image_files[sel_index]
         try:
-            image_local = Image.open(f'image/{img_file}')
+            image_local = Image.open(f'{img_file}')
             st.image(image_local, caption=user_opt)
         except FileNotFoundError:
             st.error(f'Image file {img_file} not found.')
